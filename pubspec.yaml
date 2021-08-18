@@ -29,7 +29,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  google_fonts: ^2.1.0
+  circular_countdown_timer: ^0.2.0
+  pull_to_refresh: ^2.0.0
+  table_calendar: ^3.0.2
+  firebase_auth: ^3.0.2
+  firebase_core: ^1.5.0
+  shimmer: ^2.0.0
+  flutter_native_splash: ^1.2.1
+  persistent_bottom_nav_bar: ^4.0.2
+  font_awesome_flutter: ^9.1.0
+  implicitly_animated_reorderable_list: ^0.4.0
+  animations: ^2.0.1
+  intl: ^0.17.0
+  provider: ^5.0.0
+  responsive_framework: ^0.1.4
+  adaptive_dialog: ^1.1.0
+  bloc: ^7.1.0
+  flutter_bloc: ^7.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
