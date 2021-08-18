@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CalendarScreen extends StatelessWidget {
-  static const routeName = 'calendar-screen';
+
+class HomeScreen extends StatelessWidget {
+
 
   @override
   Widget build(BuildContext context) {
