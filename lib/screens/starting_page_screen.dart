@@ -61,6 +61,16 @@ class StartingPage extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: Text('LOG IN')),
+            const SizedBox(height: 15),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/home');
+              },
+              child: const Text(
+                'Skip',
+                style: const TextStyle(fontSize: 24),
+              ),
+            ),
           ],
         ),
       ),
