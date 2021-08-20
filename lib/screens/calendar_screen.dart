@@ -1,12 +1,32 @@
 import 'package:flutter/material.dart';
 
 class CalendarScreen extends StatelessWidget {
-  static const routeName = 'calendar_screen';
+  static const routeName = '/calendar';
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: null,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Calendar Page"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/timer');
+                },
+                child: const Text(
+                  "Go TO TIMER",
+                  style: TextStyle(
+                    fontSize: 28
+                ),
+              )
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

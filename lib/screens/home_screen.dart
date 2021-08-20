@@ -7,10 +7,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hi, Rafi'),
+        centerTitle: true,
+        title: const Text(
+          'Hi, Rafi',
+          style: TextStyle(
+            fontFamily: 'DMSans',
+            fontSize: 28,
+          ),
+        ),
       ),
       body: Center(
-        child: Text("This is home screen"),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/calendar');
+                },
+                child: Text("Go to Calendar"))
+          ],
+        ),
       ),
     );
   }

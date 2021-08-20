@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habittracker/screens/tabs_screen.dart';
 
 import 'screens/starting_page_screen.dart';
 import 'screens/home_screen.dart';
