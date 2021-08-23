@@ -8,17 +8,39 @@ class TimerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("Timer"),
       ),
-      body: CircularCountDownTimer(
-        duration: 10,
-        initialDuration: 0,
-        height: MediaQuery.of(context).size.height / 2,
-        width: MediaQuery.of(context).size.width / 2,
-        ringColor: Colors.blue,
-        ringGradient: null,
-        fillColor: Colors.black87,
-        fillGradient: null,
+      body: Center(
+        child: CircularCountDownTimer(
+          duration: 100,
+          initialDuration: 0,
+          height: MediaQuery.of(context).size.height / 1.5,
+          width: MediaQuery.of(context).size.width / 1.5,
+          ringColor: Colors.lightBlue,
+          ringGradient: null,
+          fillColor: Colors.white24,
+          fillGradient: null,
+          backgroundColor: Colors.blueAccent,
+          backgroundGradient: null,
+          strokeWidth: 25.0,
+          strokeCap: StrokeCap.round,
+          textStyle: const TextStyle(
+              fontFamily: 'DMSans',
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 48),
+          isReverse: true,
+          isReverseAnimation: false,
+          isTimerTextShown: true,
+          autoStart: true,
+          onStart: () {
+            print("Countdown started");
+          },
+          onComplete: () {
+            print("Countdown ended");
+          },
+        ),
       ),
     );
   }
