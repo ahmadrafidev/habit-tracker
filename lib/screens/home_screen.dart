@@ -24,7 +24,13 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/calendar');
                 },
-                child: Text("Go to Calendar"))
+                child: const Text(
+                  "Go to Calendar",
+                  style: TextStyle(
+                    fontSize: 28
+                  ),
+                )
+              )
           ],
         ),
       ),
