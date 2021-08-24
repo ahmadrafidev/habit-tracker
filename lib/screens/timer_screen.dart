@@ -13,7 +13,7 @@ class TimerScreen extends StatefulWidget {
 
 class _TimerScreenState extends State<TimerScreen> {
   final CountDownController _controller = CountDownController();
-  bool _isStop = false;
+  bool _isStop = true;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class _TimerScreenState extends State<TimerScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Center (
+            Center(
               child: CircularCountDownTimer(
-                duration: 5,
+                duration: 1500,
                 initialDuration: 0,
                 height: MediaQuery.of(context).size.height / 1.5,
                 width: MediaQuery.of(context).size.width / 1.5,
@@ -52,18 +52,17 @@ class _TimerScreenState extends State<TimerScreen> {
                 autoStart: false,
                 onComplete: () {
                   Alert(
-                      context: context,
-                      title: 'Done',
-                      desc: "You've done a great job",
-                    style: const AlertStyle(
-                      isCloseButton: true,
-                      isButtonVisible: false,
-                      titleStyle:
-                          TextStyle(color: Colors.black54, fontSize: 30.0
-                        ),
-                    ),
-                    type: AlertType.success
-                    ).show();
+                          context: context,
+                          title: 'Done',
+                          desc: "You've done a great job",
+                          style: const AlertStyle(
+                            isCloseButton: true,
+                            isButtonVisible: false,
+                            titleStyle: TextStyle(
+                                color: Colors.black54, fontSize: 30.0),
+                          ),
+                          type: AlertType.success)
+                      .show();
                 },
               ),
             ),
@@ -71,29 +70,29 @@ class _TimerScreenState extends State<TimerScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(120, 45),
-                    shape: const StadiumBorder(),
-                    primary: const Color.fromRGBO(11, 128, 236, 1),
-                    padding: const EdgeInsets.all(10),
-                    textStyle: const TextStyle(
-                        fontFamily: 'DMSans',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400),
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      if (_isStop) {
-                        _isStop = false;
-                        _controller.start();
-                      } else {
-                        _isStop = true;
-                        _controller.pause();
-                      }
-                    });
-                  },
-                  icon: Icon(_isStop ? Icons.play_arrow : Icons.pause),
-                  label: Text(_isStop ? "Start" : "Stop")),
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(120, 45),
+                      shape: const StadiumBorder(),
+                      primary: const Color.fromRGBO(11, 128, 236, 1),
+                      padding: const EdgeInsets.all(10),
+                      textStyle: const TextStyle(
+                          fontFamily: 'DMSans',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400),
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        if (_isStop) {
+                          _isStop = false;
+                          _controller.start();
+                        } else {
+                          _isStop = true;
+                          _controller.pause();
+                        }
+                      });
+                    },
+                    icon: Icon(_isStop ? Icons.play_arrow : Icons.pause),
+                    label: Text(_isStop ? "Start" : "Stop")),
                 const SizedBox(width: 7),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -131,12 +130,12 @@ class _TimerScreenState extends State<TimerScreen> {
                       setState(() {
                         if (_isStop || !_isStop) {
                           _controller.restart();
-                          _isStop = false;
+                          _controller.pause();
+                          _isStop = true;
                         }
                       });
                     },
-                    child: const Text("Cancel")
-                    ),
+                    child: const Text("Cancel")),
               ],
             )
           ],

@@ -15,8 +15,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
   final today = DateTime.now();
-  get firstDay => DateTime(today.year, today.month - 6, today.day);
-  get lastDay => DateTime(today.year, today.month + 6, today.day);
+  get firstDay => DateTime(today.year, today.month - 12, today.day);
+  get lastDay => DateTime(today.year, today.month + 12, today.day);
 
   @override
   Widget build(BuildContext context) {
