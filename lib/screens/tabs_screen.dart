@@ -13,7 +13,7 @@ class TabsScreen extends StatelessWidget {
 
   
   List<Widget> _buildScreens() {
-    return [HomeScreen(), CalendarScreen(), TimerScreen()];
+    return [HomeScreen(), const CalendarScreen(), const TimerScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
