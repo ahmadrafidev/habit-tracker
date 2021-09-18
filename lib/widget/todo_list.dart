@@ -15,10 +15,25 @@ class ToDoList extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Container(
-          child: Text(
-            'TODO',
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: const Color.fromRGBO(11, 128, 236, 1),
           ),
-          color: const Color.fromRGBO(11, 128, 236, 1),
+          width: 370,
+          height: 36,
+          child: const Text(
+            'TODO',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'DMSans',
+              color: Colors.white,
+              fontSize: 26,
+              fontWeight: FontWeight.w700
+            ),
+          ),
+        ),
+        Container(
+          
         ),
       ],
     );
