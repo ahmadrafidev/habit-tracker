@@ -20,7 +20,13 @@ class _TimerScreenState extends State<TimerScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Timer"),
+        title: const Text(
+          "Timer",
+          style: TextStyle(
+              fontFamily: 'DMSans',
+              fontSize: 28,
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(

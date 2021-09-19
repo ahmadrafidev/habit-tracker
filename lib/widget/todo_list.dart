@@ -41,8 +41,8 @@ class ToDoList extends StatelessWidget {
           height: 400,
           child: todo.isEmpty
               ? Column(
-                  children: <Widget>[
-                    const Text(
+                  children: const <Widget>[
+                    Text(
                       'No TODO today. Maybe add one?',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -51,15 +51,6 @@ class ToDoList extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    Container(
-                        height: 100,
-                        child: Image.asset(
-                          'assets/images/waiting.png',
-                          fit: BoxFit.cover,
-                        )),
                   ],
                 )
               : ListView.builder(
