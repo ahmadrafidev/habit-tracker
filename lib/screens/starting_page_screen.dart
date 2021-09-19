@@ -64,7 +64,7 @@ class StartingPage extends StatelessWidget {
             const SizedBox(height: 15),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.pushNamed(context, '/tabs_screen');
               },
               child: const Text(
                 'Skip',

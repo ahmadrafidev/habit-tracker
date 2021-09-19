@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:habittracker/screens/calendar_screen.dart';
+import 'package:habittracker/screens/tabs_screen.dart';
+import 'package:habittracker/screens/timer_screen.dart';
 
-import '../widget/todo_list_main.dart';
+import './tabs_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
 
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,24 +28,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/calendar');
-                },
-                child: const Text(
-                  "Go to Calendar",
-                  style: TextStyle(
-                    fontSize: 28
-                  ),
-                )
-              )
-          ],
-        ),
-      ),
+      body: const Center(child: Text('this is will be centered')),
     );
   }
 }

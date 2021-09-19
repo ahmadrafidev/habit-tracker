@@ -72,14 +72,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 }
                 ),
             ToDoList(_userTodo, _deleteTodo),    
-            TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/timer');
-                },
-                child: const Text(
-                  "Go TO TIMER",
-                  style: TextStyle(fontSize: 20),
-                )),
           ],
         ),
       ),
