@@ -22,16 +22,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
   get firstDay => DateTime(today.year, today.month - 12, today.day);
   get lastDay => DateTime(today.year, today.month + 12, today.day);
 
-  /* this is function for todolist */
-
-  final List<Todo> _userTodo = [];
-
-
-  void _deleteTodo(String id) {
-    setState(() {
-      _userTodo.removeWhere((ctx) => ctx.id == id);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +68,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   }
                 }
                 ),
-            ToDoList(_userTodo, _deleteTodo),    
+
           ],
         ),
       ),
