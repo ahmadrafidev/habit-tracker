@@ -85,6 +85,7 @@ class _NewTodoState extends State<NewTodo> {
                 child: const Text('Add Todo'),
                 style: TextButton.styleFrom(
                   primary: Colors.white,
+                  backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
                 ),
                 onPressed: _submitDataHandler),
           ],

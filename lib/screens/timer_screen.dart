@@ -19,6 +19,7 @@ class _TimerScreenState extends State<TimerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
         centerTitle: true,
         title: const Text(
           "Timer",

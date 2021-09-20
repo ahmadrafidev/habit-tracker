@@ -39,7 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _startAddNewTodo(BuildContext ctx) {
     showModalBottomSheet(
+        backgroundColor: Colors.white,
         context: ctx,
+        isDismissible: true,
+        enableDrag: true,
         builder: (_) {
           return GestureDetector(
             child: NewTodo(_addNewTodo),
@@ -52,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
           centerTitle: true,
           title: const Text(
             'Hi, Rafi',
@@ -61,12 +65,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-        body: ToDoList(_userTodo, _deleteTodo),
+        body: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(),
+            child: ToDoList(_userTodo, _deleteTodo)
+            ),
+          ),
         floatingActionButton: FloatingActionButton.extended(
           label: const Text('ADD'),
           icon: const Icon(Icons.add),
           onPressed: () => _startAddNewTodo(context),
+          backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
         )
-        );
+      );
   }
 }
