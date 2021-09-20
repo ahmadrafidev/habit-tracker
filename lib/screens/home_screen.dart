@@ -4,9 +4,8 @@ import 'package:habittracker/screens/tabs_screen.dart';
 import 'package:habittracker/screens/timer_screen.dart';
 import './tabs_screen.dart';
 
-import '../widget/chart.dart';
 import '../widget/todo_list_main.dart';
-import '../widget/chart_bar.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
