@@ -55,38 +55,33 @@ class ToDoList extends StatelessWidget {
                     ),
                   ],
                 )
-              : Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: todo.length,
-                      itemBuilder: (ctx, index) {
-                        return Card(
-                          elevation: 5,
-                          margin: const EdgeInsets.symmetric(
-                            vertical: 8,
-                            horizontal: 5,
-                          ),
-                          child: ListTile(
-                            title: Text(
-                              todo[index].name!,
-                              style: Theme.of(context).textTheme.bodyText1,
-                            ),
-                            subtitle: Text(
-                              DateFormat.yMMMd().format(todo[index].date!),
-                            ),
-                            trailing: IconButton(
-                              icon: const Icon(Icons.delete_sharp),
-                              color: Theme.of(context).errorColor,
-                              onPressed: () => deleteTodo(todo[index].id),
-                            ),
-                          ),
-                        );
-                      },
-            ),
-                ],
-              ),
+              : ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: todo.length,
+                  itemBuilder: (ctx, index) {
+                    return Card(
+                      elevation: 5,
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 5,
+                      ),
+                      child: ListTile(
+                        title: Text(
+                          todo[index].name!,
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
+                        subtitle: Text(
+                          DateFormat.yMMMd().format(todo[index].date!),
+                        ),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.delete_sharp),
+                          color: Theme.of(context).errorColor,
+                          onPressed: () => deleteTodo(todo[index].id),
+                  ),
+                ),
+              );
+            },
+          ),
         ),
       ],
     );

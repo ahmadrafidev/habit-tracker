@@ -66,12 +66,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(),
-            child: ToDoList(_userTodo, _deleteTodo)
-            ),
+          child: Column(
+            children: <Widget>[
+              ToDoList(_userTodo, _deleteTodo),
+            ],
           ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: FloatingActionButton.extended(
+          elevation: 2,
           label: const Text('ADD'),
           icon: const Icon(Icons.add),
           onPressed: () => _startAddNewTodo(context),
