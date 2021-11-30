@@ -43,7 +43,9 @@ class StartingPage extends StatelessWidget {
                     fontSize: 28,
                     fontWeight: FontWeight.w400),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/signup_page');
+              },
               child: const Text('SIGN UP'),
             ),
             const SizedBox(height: 30),
@@ -59,8 +61,10 @@ class StartingPage extends StatelessWidget {
                       fontSize: 28,
                       fontWeight: FontWeight.w400),
                 ),
-                onPressed: () {},
-                child: Text('LOG IN')),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login_page');
+                },
+                child: const Text('LOG IN')),
             const SizedBox(height: 15),
             TextButton(
               onPressed: () {
@@ -68,7 +72,7 @@ class StartingPage extends StatelessWidget {
               },
               child: const Text(
                 'Skip',
-                style: const TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 24),
               ),
             ),
           ],

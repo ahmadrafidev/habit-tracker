@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:habittracker/models/todo.dart';
-import 'package:habittracker/screens/calendar_screen.dart';
-import 'package:habittracker/screens/tabs_screen.dart';
-import 'package:habittracker/screens/timer_screen.dart';
-import './tabs_screen.dart';
 
 import '../widget/todo_list.dart';
 import '../widget/new_todo.dart';
