@@ -22,7 +22,7 @@ class _TimerScreenState extends State<TimerScreen> {
         backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
         centerTitle: true,
         title: const Text(
-          "Timer",
+          "Pomodoro",
           style: TextStyle(
               fontFamily: 'DMSans',
               fontSize: 28,

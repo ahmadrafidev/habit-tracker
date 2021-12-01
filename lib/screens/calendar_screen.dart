@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habittracker/models/todo.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../widget/todo_list.dart';
 
 class CalendarScreen extends StatefulWidget {
   static const routeName = '/calendar';
@@ -30,7 +28,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
         backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
         centerTitle: true,
         title: const Text(
-          "Calendar Page",
+          "Calendar",
           style: TextStyle(
             fontFamily: 'DMSans',
             fontSize: 28,

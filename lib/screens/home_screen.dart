@@ -68,11 +68,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        floatingActionButton: FloatingActionButton.extended(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: FloatingActionButton(
           elevation: 2,
-          label: const Text('ADD'),
-          icon: const Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: () => _startAddNewTodo(context),
           backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
         )

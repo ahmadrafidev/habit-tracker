@@ -39,52 +39,55 @@ class ToDoList extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 8,
           ),
-          Container(
-            height: 485,
-            child: todo.isEmpty
-                ? Column(
-                    children: const <Widget>[
-                      Text(
-                        'Empty Here.\n Maybe add one?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: 'DMSans',
-                          fontSize: 22,
-                          fontWeight: FontWeight.w700,
+          SingleChildScrollView(
+            child: Container(
+              height: 550,
+              child: todo.isEmpty
+                  ? Column(
+                      children: const <Widget>[
+                        Text(
+                          'Empty Here.\n Maybe add one?',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'DMSans',
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
+                      ],
+                    )
+                  : ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: todo.length,
+                      itemBuilder: (ctx, index) {
+                        return Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.symmetric(
+                            vertical: 8,
+                            horizontal: 5,
+                          ),
+                          child: ListTile(
+                            title: Text(
+                              todo[index].name!,
+                              style: Theme.of(context).textTheme.bodyText1,
+                            ),
+                            subtitle: Text(
+                              DateFormat.yMMMd().format(todo[index].date!),
+                            ),
+                            trailing: IconButton(
+                              icon: const Icon(Icons.delete_sharp),
+                              color: Theme.of(context).errorColor,
+                              onPressed: () => deleteTodo(todo[index].id),
                       ),
-                    ],
-                  )
-                : ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: todo.length,
-                    itemBuilder: (ctx, index) {
-                      return Card(
-                        elevation: 5,
-                        margin: const EdgeInsets.symmetric(
-                          vertical: 8,
-                          horizontal: 5,
-                        ),
-                        child: ListTile(
-                          title: Text(
-                            todo[index].name!,
-                            style: Theme.of(context).textTheme.bodyText1,
-                          ),
-                          subtitle: Text(
-                            DateFormat.yMMMd().format(todo[index].date!),
-                          ),
-                          trailing: IconButton(
-                            icon: const Icon(Icons.delete_sharp),
-                            color: Theme.of(context).errorColor,
-                            onPressed: () => deleteTodo(todo[index].id),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
           ),
+          const SizedBox(height:10),
         ],
       ),
     );
