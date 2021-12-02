@@ -3,13 +3,14 @@
 import 'package:flutter/foundation.dart';
 
 class Todo {
-  String? id;
-  String? name;
-  DateTime? date;
+  final String? id;
+  final String? name;
+  final DateTime? date;
   
   Todo({
     required this.id,
     required this.name,
     required this.date
   });
+
 }

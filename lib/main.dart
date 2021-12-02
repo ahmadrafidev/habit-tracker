@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         LoginPage.routeName: (ctx) => const LoginPage(),
         TabsScreen.routeName : (ctx) => const TabsScreen(),
         HomeScreen.routeName: (ctx) => const HomeScreen(),
-        CalendarScreen.routeName: (ctx) => const CalendarScreen(),
+        CalendarScreen.routeName: (ctx) => CalendarScreen(),
         TimerScreen.routeName: (ctx) => const TimerScreen(),
       },
     );
