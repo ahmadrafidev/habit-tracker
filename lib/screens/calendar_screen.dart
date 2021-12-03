@@ -137,7 +137,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
+      floatingActionButton: FloatingActionButton(
         onPressed: () => showDialog(
           context: context,
           builder: (context) => AlertDialog(
@@ -185,8 +185,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             ],
           ),
         ),
-        label: const Text("ADD"),
-        icon: const Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
