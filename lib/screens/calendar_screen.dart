@@ -44,7 +44,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: Colors.grey.shade300,
         title: const Text(
           "Calendar",
             style: TextStyle(
@@ -119,9 +119,18 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
             ),
             ..._getEventsfromDay(selectedDay).map(
-              (Event event) => ListTile(
-                title: Text(
-                  event.title,
+              (Event event) => Card(
+                color: Colors.grey.shade100,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                   side: const BorderSide(color: Colors.white70, width: 1),
+                ),
+                shadowColor: Colors.grey.shade300,
+                elevation: 3,
+                child: ListTile(
+                  title: Text(
+                    event.title,
+                  ),
                 ),
               ),
             ),

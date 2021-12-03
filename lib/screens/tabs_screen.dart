@@ -53,7 +53,7 @@ class _TabsScreenState extends State<TabsScreen> {
       controller: _controller,
       screens: _buildScreens(),
       confineInSafeArea: true,
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.grey.shade300,
       navBarStyle: NavBarStyle.style13,
       items: _navBarsItems(),
       handleAndroidBackButtonPress: true, 
