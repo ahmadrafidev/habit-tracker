@@ -51,13 +51,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
+          backgroundColor: Colors.grey.shade200,
           centerTitle: true,
           title: const Text(
             'Hi, Rafi',
             style: TextStyle(
               fontFamily: 'DMSans',
               fontSize: 28,
+              color: Colors.blue,
             ),
           ),
         ),

@@ -19,11 +19,12 @@ class _TimerScreenState extends State<TimerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(11, 128, 236, 1),
+        backgroundColor: Colors.grey.shade200,
         centerTitle: true,
         title: const Text(
           "Pomodoro",
           style: TextStyle(
+            color: Colors.blue,
               fontFamily: 'DMSans',
               fontSize: 28,
           ),
@@ -40,7 +41,7 @@ class _TimerScreenState extends State<TimerScreen> {
                 height: MediaQuery.of(context).size.height / 1.5,
                 width: MediaQuery.of(context).size.width / 1.5,
                 controller: _controller,
-                ringColor: Colors.lightBlue,
+                ringColor: Colors.blue.shade400,
                 ringGradient: null,
                 fillColor: Colors.white24,
                 fillGradient: null,

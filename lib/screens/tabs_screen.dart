@@ -16,20 +16,6 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-  // int _selectedIndex = 0;
-
-  // static const List<Widget> _screens = <Widget>[
-  //   HomeScreen(),
-  //   CalendarScreen(),
-  //   TimerScreen()
-  // ];
-
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //   });
-  // }
-
   final PersistentTabController? _controller =
       PersistentTabController(initialIndex: 0);
 
@@ -61,28 +47,13 @@ class _TabsScreenState extends State<TabsScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   body: Center(
-    //     child: _screens[_selectedIndex],
-    //   ),
-    //   bottomNavigationBar: BottomNavigationBar(
-    //       currentIndex: _selectedIndex,
-    //       onTap: _onItemTapped,
-    //       selectedItemColor: Colors.blueAccent,
-    //       items: const <BottomNavigationBarItem>[
-    //         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-    //         BottomNavigationBarItem(
-    //             icon: Icon(Icons.calendar_today), label: 'Calendar'),
-    //         BottomNavigationBarItem(icon: Icon(Icons.timer), label: 'Timer'),
-    //       ]),
-    // );
 
     return PersistentTabView(
       context,
       controller: _controller,
       screens: _buildScreens(),
       confineInSafeArea: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey.shade200,
       navBarStyle: NavBarStyle.style13,
       items: _navBarsItems(),
       handleAndroidBackButtonPress: true, 

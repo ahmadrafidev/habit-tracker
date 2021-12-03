@@ -28,7 +28,7 @@ class ToDoList extends StatelessWidget {
               width: 370,
               height: 36,
               child: const Text(
-                'TODO',
+                'To-do list',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'DMSans',
